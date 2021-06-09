@@ -1,0 +1,22 @@
+version: "3"
+services:
+  web:
+    image: nginx:latest
+    links:
+      - "php"
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/here
+      - ./nginx_conf:/etc/nginx/conf.d
+    networks: 
+      - code-network
+  php:
+    build: ../
+    # image: dasiek/php74
+    volumes:
+      - ./:/here
+    networks: 
+      - code-network
+networks:
+  code-network:
