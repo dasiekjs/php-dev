@@ -1,9 +1,9 @@
-Simple PHP 7.4 container
+Simple PHP containers
 
 NOT INCLUDED WEBSERVER (use f.ex nginx from example folder)
 Use this image as php service - link it into your container and use port 9000
 
-installed things:
+installed extensions:
 - iconv 
 - gettext 
 - intl 
@@ -27,7 +27,7 @@ installed things:
 build
 
 ```
-docker build . -t name
+docker build . -t __Name__
 ```
 
 example usage with nginx in `example folder`

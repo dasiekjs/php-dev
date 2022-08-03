@@ -11,9 +11,23 @@ services:
       - ./nginx_conf:/etc/nginx/conf.d
     networks: 
       - code-network
-  php:
-    build: ../
-    # image: dasiek/php74
+  php72:
+    build: ../7.2
+    # image: dasiek/php:7.2
+    volumes:
+      - ./:/here
+    networks: 
+      - code-network
+  php74:
+    build: ../7.4
+    # image: dasiek/php:7.4
+    volumes:
+      - ./:/here
+    networks: 
+      - code-network
+  php8:
+    build: ../8.0
+    # image: dasiek/php:8.0
     volumes:
       - ./:/here
     networks: 
